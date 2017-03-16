@@ -15,7 +15,8 @@ use Whoops\Run;
 
 class WhoopsServiceProvider implements ServiceProviderInterface
 {
-    public function register(Container $app) {
+    public function register(Container $app)
+    {
         $app['whoops.error_page_handler'] = function () {
             if (PHP_SAPI === 'cli') {
                 return new PlainTextHandler();

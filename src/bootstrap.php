@@ -21,6 +21,6 @@ if (getenv('APP_ENV') === "development") {
 // ROUTES
 
 $app->register(new ServiceControllerServiceProvider());
-$app->mount('/', new \App\Http\AppControllerProvider());
+$app->mount('/', new \App\Provider\Route\AppControllerProvider());
 
 return $app;

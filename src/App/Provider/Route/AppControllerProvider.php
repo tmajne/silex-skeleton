@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http;
+namespace App\Provider\Route;
 
 use App\Http\Controller\AppController;
 use Silex\Api\ControllerProviderInterface;
@@ -12,7 +12,7 @@ class AppControllerProvider implements ControllerProviderInterface
 {
     public function connect(Application $app)
     {
-        $app['app.controller'] = function($app) {
+        $app['app.controller'] = function ($app) {
             return new AppController($app);
         };
 
