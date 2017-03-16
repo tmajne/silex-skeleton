@@ -1,0 +1,41 @@
+{
+  "name": "tmajne/silex-skeleton",
+  "description": "silex skeleton",
+  "keywords": ["silex", "skeleton", "php"],
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Tomasz Tomczyk",
+      "email": "ttomczyk@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "silex/silex": "2.0.x-dev",
+    "filp/whoops": "^2.1",
+    "symfony/css-selector": "^3.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.6.x-dev",
+    "symfony/browser-kit": "^3.1",
+    "symfony/debug-bundle": "^3.1",
+    "silex/web-profiler": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/App"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "App\\Test\\": "tests"
+    }
+  },
+  "scripts": {
+    "run": [
+      "echo 'Started web server on http://localhost:8888'",
+      "php7.1 -S localhost:8888 -t web"
+    ]
+  }
+}
