@@ -16,30 +16,30 @@ class AppControllerProvider implements ControllerProviderInterface
             return new AppController($app);
         };
 
-        $app = $app['controllers_factory'];
+        $controller = $app['controllers_factory'];
 
-        $app->get('/', function () {
+        $controller->get('/', function () {
             return 'Test Service Controller home page';
         })->bind('home');
 
-        $app->get('/demo', 'app.controller:demo')
+        $controller->get('/demo', 'app.controller:demo')
             ->bind('demo');
 
-        $app->get('/json', 'app.controller:json')
+        $controller->get('/json', 'app.controller:json')
             ->bind('json');
 
-        $app->get('/exception', 'app.controller:exception')
+        $controller->get('/exception', 'app.controller:exception')
             ->bind('exception');
 
         // EXAMPLES
         
-        /*$app->get('/exception', 'App\\Http\\Controller\\AppController::json')
+        /*$controller->get('/exception', 'App\\Http\\Controller\\AppController::json')
             ->bind('exception');*/
 
-        /*$app->get('/hello/{name}', function ($name) use ($app) {
+        /*$controller->get('/hello/{name}', function ($name) use ($app) {
                 return 'Hello '.$app->escape($name);
             });*/
 
-        return $app;
+        return $controller;
     }
 }
