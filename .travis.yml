@@ -8,6 +8,6 @@ before_script:
   - composer install --prefer-dist --no-interaction
 
 script:
-  - ./vendeor/bin/phpunit
+  - ./vendor/bin/phpunit
   - ./vendor/bin/phpcs --standard=PSR2 ./src/ ./tests/
  
