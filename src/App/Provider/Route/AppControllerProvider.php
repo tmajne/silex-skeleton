@@ -32,13 +32,12 @@ class AppControllerProvider implements ControllerProviderInterface
             ->bind('exception');
 
         // EXAMPLES
-        
-        /*$controller->get('/exception', 'App\\Http\\Controller\\AppController::json')
-            ->bind('exception');*/
+        $controller->get('/example/class/namespace', 'App\\Http\\Controller\\AppController::json')
+            ->bind('example.exception');
 
-        /*$controller->get('/hello/{name}', function ($name) use ($app) {
+        $controller->get('/example/callback/hello/{name}', function ($name) use ($app) {
                 return 'Hello '.$app->escape($name);
-            });*/
+            });
 
         return $controller;
     }
