@@ -37,7 +37,7 @@ class AppControllerProvider implements ControllerProviderInterface
 
         $controller->get('/example/callback/hello/{name}', function ($name) use ($app) {
                 return 'Hello '.$app->escape($name);
-            });
+        });
 
         return $controller;
     }
